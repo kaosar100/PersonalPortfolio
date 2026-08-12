@@ -1,0 +1,22 @@
+{% extends 'Portfolio/base.html' %}
+
+{% block title %}Dashboard · Portfolio{% endblock %}
+
+{% block content %}
+<section class="dashboard-head">
+    <div>
+        <p class="eyebrow">YOUR WORKSPACE</p>
+        <h1>Make it unmistakably yours.</h1>
+        <p>Everything below appears on your downloadable-style CV; projects and skills also power the portfolio story.</p>
+    </div>
+    <a class="button" href="{% url 'resume' %}">Preview CV</a>
+</section>
+
+<section class="profile-card">
+    <h2>{{ profile.full_name|default:user.username }}</h2>
+    <p>{{ profile.headline|default:'Add a headline to introduce yourself.' }}</p>
+    <a href="{% url 'profile_edit' %}">Edit profile →</a>
+</section>
+
+{% include 'Portfolio/manage_sections.html' %}
+{% endblock %}

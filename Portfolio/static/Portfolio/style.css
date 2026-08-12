@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+    --ink: #17211e;
+    --paper: #f7f6f0;
+    --lime: #d8ff4e;
+    --muted: #68726e;
+    --line: #d9ddd7;
+    --red: #b44335
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 16px/1.55 'DM Sans', sans-serif
+}
+
+header,
+main,
+footer {
+    max-width: 1160px;
+    margin: auto;
+    padding-left: 28px;
+    padding-right: 28px
+}
+
+header {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line)
+}
+
+.brand {
+    font: 700 24px 'DM Mono';
+    color: var(--ink);
+    text-decoration: none
+}
+
+.brand span {
+    color: #78a400
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px
+}
+
+a {
+    color: var(--ink);
+    text-decoration-color: #9aaf35;
+    text-underline-offset: 3px
+}
+
+.link {
+    border: 0;
+    background: 0;
+    padding: 0;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+.inline {
+    display: inline
+}
+
+.button {
+    display: inline-block;
+    background: var(--ink);
+    color: white;
+    padding: 13px 20px;
+    border: 1px solid var(--ink);
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.button:hover {
+    background: #31423d
+}
+
+.small {
+    padding: 8px 13px
+}
+
+.hero {
+    padding: 105px 0 90px;
+    max-width: 780px
+}
+
+.eyebrow {
+    font: 12px 'DM Mono';
+    letter-spacing: .09em;
+    color: #74843a;
+    margin: 0 0 12px
+}
+
+.hero h1,
+h1 {
+    font: 700 clamp(42px, 7vw, 76px)/1.02 'Playfair Display';
+    margin: 0 0 22px
+}
+
+.lead {
+    font-size: 20px;
+    color: var(--muted);
+    max-width: 700px;
+    margin-bottom: 30px
+}
+
+.text-link {
+    margin-left: 24px;
+    font-weight: 700
+}
+
+section {
+    padding: 62px 0
+}
+
+.section-heading h2,
+h2 {
+    font: 700 33px 'Playfair Display';
+    margin: 0 0 25px
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px
+}
+
+.chips span {
+    background: #e7ebdf;
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 14px
+}
+
+.chips b {
+    font-weight: 400;
+    color: var(--muted)
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px
+}
+
+.card,
+.panel,
+.profile-card,
+.manage {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 25px
+}
+
+.card {
+    min-height: 235px;
+    display: flex;
+    flex-direction: column
+}
+
+.card h3 {
+    font: 700 25px 'Playfair Display';
+    margin: 4px 0 10px
+}
+
+.card p:not(.eyebrow) {
+    color: var(--muted);
+    flex: 1
+}
+
+.card a {
+    margin-right: 14px;
+    font-weight: 700
+}
+
+.auth {
+    max-width: 650px;
+    margin: auto;
+    padding: 75px 0
+}
+
+.auth h1 {
+    font-size: 48px
+}
+
+.panel {
+    display: grid;
+    gap: 17px
+}
+
+.field {
+    display: grid;
+    gap: 6px
+}
+
+.field label {
+    font-weight: 700
+}
+
+.input {
+    width: 100%;
+    border: 1px solid #b9c1bb;
+    padding: 11px;
+    font: inherit;
+    background: #fff
+}
+
+.error,
+.errors {
+    color: var(--red)
+}
+
+small {
+    color: var(--muted)
+}
+
+.actions {
+    display: flex;
+    gap: 20px;
+    align-items: center
+}
+
+.destructive {
+    background: var(--red);
+    border-color: var(--red)
+}
+
+.notice {
+    background: var(--lime);
+    padding: 12px 18px;
+    margin-top: 18px
+}
+
+.dashboard-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: end;
+    padding-bottom: 32px
+}
+
+.dashboard-head h1 {
+    font-size: 48px
+}
+
+.dashboard-head p:not(.eyebrow) {
+    color: var(--muted);
+    max-width: 640px
+}
+
+.profile-card {
+    margin-bottom: 25px
+}
+
+.profile-card h2 {
+    margin-bottom: 4px
+}
+
+.manage {
+    margin: 18px 0
+}
+
+.manage-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line)
+}
+
+.manage-title h2 {
+    font-size: 25px;
+    margin-bottom: 15px
+}
+
+.manage-title a {
+    font-weight: 700
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1.4fr 2fr auto auto;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid #edf0ec
+}
+
+.item span {
+    color: var(--muted)
+}
+
+.danger {
+    color: var(--red)
+}
+
+.resume {
+    max-width: 850px;
+    margin: 65px auto;
+    background: white;
+    padding: 55px;
+    border: 1px solid var(--line)
+}
+
+.resume-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: start
+}
+
+.resume h1 {
+    font-size: 52px;
+    margin: 0
+}
+
+.resume-top p {
+    font-size: 20px;
+    margin: 0
+}
+
+.contact-line {
+    font: 14px 'DM Mono';
+    color: var(--muted);
+    margin-top: 18px
+}
+
+.resume hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 32px 0
+}
+
+.resume h2 {
+    font-size: 28px;
+    margin-top: 35px
+}
+
+.resume-item {
+    margin: 20px 0
+}
+
+.resume-item h3 {
+    margin: 0;
+    font-size: 18px
+}
+
+.resume-item h3 span {
+    font-weight: 400;
+    color: var(--muted)
+}
+
+.resume-item p {
+    margin: 5px 0
+}
+
+.print {
+    white-space: nowrap
+}
+
+footer {
+    padding-top: 45px;
+    padding-bottom: 38px;
+    color: var(--muted);
+    font-size: 14px
+}
+
+@media(max-width:700px) {
+    header {
+        height: auto;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        align-items: start;
+        gap: 12px
+    }
+
+    nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: end;
+        font-size: 14px
+    }
+
+    .hero {
+        padding: 65px 0
+    }
+
+    .cards {
+        grid-template-columns: 1fr
+    }
+
+    .dashboard-head,
+    .resume-top {
+        display: block
+    }
+
+    .dashboard-head .button,
+    .print {
+        margin-top: 15px
+    }
+
+    .item {
+        grid-template-columns: 1fr auto
+    }
+
+    .item span {
+        grid-column: 1/-1
+    }
+
+    .resume {
+        padding: 28px
+    }
+
+    .resume h1 {
+        font-size: 39px
+    }
+}
+
+@media print {
+
+    header,
+    footer,
+    .print {
+        display: none
+    }
+
+    body {
+        background: white
+    }
+
+    .resume {
+        border: 0;
+        margin: 0;
+        max-width: none
+    }
+}

@@ -1,0 +1,16 @@
+<section class="manage">
+    <div class="manage-title"><h2>Skills</h2><a href="{% url 'skills_add' %}">+ Add</a></div>
+    {% for item in skills %}<div class="item"><b>{{ item.name }}</b><span>{{ item.proficiency }}%</span><a href="{% url 'skills_edit' item.pk %}">Edit</a><a class="danger" href="{% url 'skills_delete' item.pk %}">Delete</a></div>{% empty %}<p>No skills yet.</p>{% endfor %}
+</section>
+<section class="manage">
+    <div class="manage-title"><h2>Education</h2><a href="{% url 'education_add' %}">+ Add</a></div>
+    {% for item in educations %}<div class="item"><b>{{ item.degree }}</b><span>{{ item.institution }}</span><a href="{% url 'education_edit' item.pk %}">Edit</a><a class="danger" href="{% url 'education_delete' item.pk %}">Delete</a></div>{% empty %}<p>No education entries yet.</p>{% endfor %}
+</section>
+<section class="manage">
+    <div class="manage-title"><h2>Experience</h2><a href="{% url 'experience_add' %}">+ Add</a></div>
+    {% for item in experiences %}<div class="item"><b>{{ item.role }}</b><span>{{ item.company }}</span><a href="{% url 'experience_edit' item.pk %}">Edit</a><a class="danger" href="{% url 'experience_delete' item.pk %}">Delete</a></div>{% empty %}<p>No experience entries yet.</p>{% endfor %}
+</section>
+<section class="manage">
+    <div class="manage-title"><h2>Projects</h2><a href="{% url 'projects_add' %}">+ Add</a></div>
+    {% for item in projects %}<div class="item"><b>{{ item.title }}</b><span>{{ item.technologies }}</span><a href="{% url 'projects_edit' item.pk %}">Edit</a><a class="danger" href="{% url 'projects_delete' item.pk %}">Delete</a></div>{% empty %}<p>No projects yet.</p>{% endfor %}
+</section>

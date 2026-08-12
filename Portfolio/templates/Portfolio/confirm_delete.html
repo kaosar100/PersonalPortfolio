@@ -1,0 +1,17 @@
+{% extends 'Portfolio/base.html' %}
+
+{% block content %}
+<section class="auth">
+    <p class="eyebrow">ONE LAST CHECK</p>
+    <h1>{{ title }}</h1>
+
+    <form method="post" class="panel">
+        {% csrf_token %}
+        <p>Delete <strong>{{ object }}</strong>? This cannot be undone.</p>
+        <div class="actions">
+            <button class="button destructive" type="submit">Delete permanently</button>
+            <a href="{% url 'dashboard' %}">Keep it</a>
+        </div>
+    </form>
+</section>
+{% endblock %}

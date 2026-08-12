@@ -1,0 +1,17 @@
+{% extends 'Portfolio/base.html' %}
+
+{% block content %}
+<section class="auth">
+    <p class="eyebrow">PORTFOLIO EDITOR</p>
+    <h1>{{ title }}</h1>
+
+    <form method="post" class="panel">
+        {% csrf_token %}
+        {% include 'Portfolio/form_fields.html' %}
+        <div class="actions">
+            <button class="button" type="submit">Save changes</button>
+            <a href="{% url 'dashboard' %}">Cancel</a>
+        </div>
+    </form>
+</section>
+{% endblock %}

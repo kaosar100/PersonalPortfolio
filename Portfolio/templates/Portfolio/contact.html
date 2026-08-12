@@ -1,0 +1,15 @@
+{% extends 'Portfolio/base.html' %}
+
+{% block content %}
+<section class="auth">
+    <p class="eyebrow">GET IN TOUCH</p>
+    <h1>Have an idea worth building?</h1>
+    <p class="lead">Leave a note. I’ll read it and get back to you soon.</p>
+
+    <form method="post" class="panel">
+        {% csrf_token %}
+        {% include 'Portfolio/form_fields.html' %}
+        <button class="button" type="submit">Send message</button>
+    </form>
+</section>
+{% endblock %}

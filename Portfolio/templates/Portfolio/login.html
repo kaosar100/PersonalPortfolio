@@ -1,0 +1,15 @@
+{% extends 'Portfolio/base.html' %}
+
+{% block content %}
+<section class="auth">
+    <p class="eyebrow">WELCOME BACK</p>
+    <h1>Sign in to your workspace.</h1>
+
+    <form method="post" class="panel">
+        {% csrf_token %}
+        {% include 'Portfolio/form_fields.html' %}
+        <button class="button" type="submit">Sign in</button>
+        <p>New here? <a href="{% url 'register' %}">Create an account</a>.</p>
+    </form>
+</section>
+{% endblock %}
